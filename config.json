@@ -1,18 +1,11 @@
-# SQL to FHIR
-
-This is unfinished engine to convert your sql database to FHIR standard
-
-### config
-
-```json
 {
     "connection": {
         "dialect": "mysql",
-        "host": "",
+        "host": "localhost",
         "port": 3306,
-        "db": "",
-        "user": "",
-        "password": ""
+        "db": "rs_sakinah",
+        "user": "root",
+        "password": "zxasqw12"
     },
     "map": {
         "patient": {
@@ -59,23 +52,3 @@ This is unfinished engine to convert your sql database to FHIR standard
         }
     }
 }
-
-```
-
-### execute
-```bash
-> npm i
-> node ./index.js
-```
-
-
-
-
-
-
-
-
-### contributors
-- Aziz
-- Yahya
-- Yoza

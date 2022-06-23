@@ -1,35 +1,21 @@
-# SQL to FHIR
-
-This is unfinished engine to convert your sql database to FHIR standard
-
-### config
-
-```json
 {
     "connection": {
         "dialect": "mysql",
-        "host": "",
+        "host": "localhost",
         "port": 3306,
-        "db": "",
-        "user": "",
-        "password": ""
+        "db": "rs_islami",
+        "user": "root",
+        "password": "zxasqw12"
     },
     "map": {
         "patient": {
             "identifier": [{
-                    "tableName": "patients",
-                    "fieldName": "id",
-                    "use": "usual"
-                },
-                {
-                    "tableName": "patients",
-                    "fieldName": "record_no",
-                    "use": "secondary"
-                }
-            ],
+                "tableName": "patients",
+                "fieldName": "id"
+            }],
             "name": [{
                 "tableName": "patients",
-                "fieldName": "full_name"
+                "fieldName": "lname"
             }],
             "telecom": [{
                 "tableName": "patients",
@@ -39,10 +25,7 @@ This is unfinished engine to convert your sql database to FHIR standard
                 "tableName": "patients",
                 "fieldName": "gender"
             },
-            "birthDate": {
-                "tableName": "patients",
-                "fieldName": "birth_date"
-            },
+            "birthDate": null,
             "deceasedDateTime": null,
             "address": [{
                 "tableName": "patients",
@@ -59,23 +42,3 @@ This is unfinished engine to convert your sql database to FHIR standard
         }
     }
 }
-
-```
-
-### execute
-```bash
-> npm i
-> node ./index.js
-```
-
-
-
-
-
-
-
-
-### contributors
-- Aziz
-- Yahya
-- Yoza
